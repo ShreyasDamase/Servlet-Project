@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Book Registration</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        .card {
+            margin-top: 50px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+        }
+        th, td {
+            padding: 10px;
+        }
+        input[type="submit"], input[type="reset"] {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="container-fluid d-flex justify-content-center align-items-center bg-warning" style="height: 100vh;">
+
+    <div class="card  " style="width: 40rem; background-color: aqua;">
+        <form action="register" method="post">
+            <h1 class="text-center">Book Registration</h1>
+            <table class="table">
+                <tr>
+                    <th>Book Name</th>
+                    <td><input type="text" name="bookName" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>Book Edition</th>
+                    <td><input type="text" name="bookEdition" class="form-control"></td>
+                </tr>
+                <tr>
+                    <th>Book Price</th>
+                    <td><input type="text" name="bookPrice" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Register" class="btn btn-primary " style="background-color:green"></td>
+                    <td><input type="reset" value="Cancel" class="btn btn-secondary " style="background-color:red"></td>
+                </tr>
+            </table>
+            <a href='booklist'>Book List</a>
+        </form>
+    </div>
+
+</body>
+</html>

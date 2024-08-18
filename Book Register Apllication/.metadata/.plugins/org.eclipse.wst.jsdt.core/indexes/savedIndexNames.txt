@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+D:\Webprograming\Book Register Apllication\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4162599541.index
+1416783645.index
+1739389466.index
+265931849.index
+3061597902.index
+4088267030.index
+4236288171.index

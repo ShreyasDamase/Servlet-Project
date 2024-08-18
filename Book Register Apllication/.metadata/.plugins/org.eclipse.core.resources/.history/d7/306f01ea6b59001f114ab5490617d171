@@ -1,0 +1,66 @@
+package com.app.servlet;
+
+import static com.app.servlet.DBConnection.getConnection;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+@WebServlet("/editBook")
+public class EditBookServler extends HttpServlet {
+ private static String query=" update book set BookName=?, BookEdition=?,BookPrice=? where BookId=?";
+ @Override
+ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+  //get print writer
+ 	PrintWriter pw=resp.getWriter();
+ //set content type
+ 	resp.setContentType("text/html");
+ 	String bookid=req.getParameter("bookId");
+ 	 
+ 	pw.println("<form method='post' action'editBook'>");
+ 	pw.println("<input type='hidden' name'bookId' value='"+bookid+"'>");
+
+ 	pw.println("<table>");
+ 	pw.println("<tr>");
+ 	pw.println("<td> Book Name</td>");
+ 	pw.println("<td><input type='text' name'bookName'></td>");
+ 	
+ 	pw.println("</tr>");
+ 	pw.println("<tr>");
+ 	pw.println("<td>Book Edition</td>");
+ 	pw.println("<td><input type='text' name'bookEdition'></td>");
+ 	
+ 	pw.println("</tr>");
+ 	pw.println("</tr>");
+ 	pw.println("<tr>");
+ 	pw.println("<td>Book Price</td>");
+ 	pw.println("<td><input type='text' name'bookPrice'></td>");
+ 	
+ 	pw.println("</tr>");
+ 	pw.println("<input type='submit' >");
+ 	
+ 	
+ 	pw.println("</table>");
+ 	pw.println("</form>");
+ 	
+ //getting connection 
+ 	 
+ 	
+ }
+
+ @Override
+ 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+ 		// TODO Auto-generated method stub
+ 		doGet(req, resp);
+ 	}
+
+
+}
